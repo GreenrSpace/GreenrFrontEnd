@@ -14,12 +14,12 @@ function NavbarCustom({ fixed }) {
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link href="/" passHref>
               <a aria-label="Home page">
-                {/* <img
+                <img
                   className="h-8 w-auto sm:h-10"
-                  src=""
+                  src="/static/example_photos/fullheaderlogo.jpg"
                   alt=""
-                /> */}
-                <div > GreenR Space </div>
+                />
+                <div className = "" > Greenr Space </div>
 
               </a>
             </Link>
