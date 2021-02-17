@@ -25,7 +25,7 @@ export default function Home() {
       ContactLink: "https://moodmap.app",
     },
     {
-      ImageLink: "/static/example_photos/thaiconstelation.png",
+      ImageLink: "/static/example_photos/thaiconstelation.PNG",
       Name: "Thai Constellation",
       Description: "Thai Constellation",
       ContactLink: "https://moodmap.app",
