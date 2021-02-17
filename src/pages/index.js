@@ -9,7 +9,7 @@ export default function Home() {
     {
       ImageLink: "/static/example_photos/albomonstera.JPG",
       Name: "Monstera Albo Variegated",
-      Description: "Monstera Albo Variegated",
+      Description: "Monstera Albo Variegated is a beautiful plant yeahhhhh",
       ContactLink: "https://moodmap.app",
     },
     {
