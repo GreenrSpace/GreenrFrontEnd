@@ -1,4 +1,7 @@
 import React from "react";
+import Image from "next/image";
+
+
 
 export default function Modal(props) {
 
@@ -8,13 +11,12 @@ export default function Modal(props) {
   return (
     <>
       <button
-        className="bg-green-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+        className="bg-green-500 text-white active:bg-pink-600 font-bold uppercase text-sm rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
         type="button"
         style={{ transition: "all .15s ease" }}
         onClick={() => setShowModal(true)}
       >
-        Open regular modal
-      </button>
+More Information      </button>
       {showModal ? (
         <>
           <div
@@ -49,18 +51,17 @@ export default function Modal(props) {
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1"
                     type="button"
                     style={{ transition: "all .15s ease" }}
-                    onClick={() => setShowModal(false)}
+                    // onClick={() => setShowModal(false)}
                   >
-                    Close
+                    Contact
                   </button>
                   <button
                     className="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                     type="button"
                     style={{ transition: "all .15s ease" }}
-                    onClick={() => setShowModal(false)}
+                    // onClick={() => setShowModal(false)}
                   >
-                    Save Changes
-                  </button>
+Make an Offer                  </button>
                 </div>
               </div>
             </div>
