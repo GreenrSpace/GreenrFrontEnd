@@ -19,7 +19,7 @@ function NavbarCustom({ fixed }) {
                   src="/static/example_photos/fullheaderlogo.png"
                   alt=""
                 />
-                <div className = "" > Greenr Space </div>
+            
 
               </a>
             </Link>
