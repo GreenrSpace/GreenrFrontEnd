@@ -16,7 +16,7 @@ function NavbarCustom({ fixed }) {
               <a aria-label="Home page">
                 <img
                   className="h-8 w-auto sm:h-10"
-                  src="/static/example_photos/fullheaderlogo.jpg"
+                  src="/static/example_photos/fullheaderlogo.png"
                   alt=""
                 />
                 <div className = "" > Greenr Space </div>
