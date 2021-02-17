@@ -78,13 +78,11 @@ export default function Home() {
       Description: "Epipremnum Pinnatum Variegated",
       ContactLink: "https://moodmap.app",
     },
-    },
     {
       ImageLink: "/static/example_photos/melano.JPG",
       Name: "Philodendron Melanochrysum",
       Description: "Philodendron Melanochrysum",
       ContactLink: "https://moodmap.app",
-    },
     },
     {
       ImageLink: "/static/example_photos/philogigas.JPG",
