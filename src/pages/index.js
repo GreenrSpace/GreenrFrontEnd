@@ -74,7 +74,7 @@ export default function Home() {
           </p>
           </main>
           </div>
-          <div className="grid grid-cols-3 gap-4 flex">
+          <div className="grid grid-cols-3 gap-4 flex justify-evenly">
             {ExamplePlant.map((number) => (
               <Plant
               key={number}
