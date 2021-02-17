@@ -1,15 +1,13 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import Layout from "components/Layout/Layout.js"
 import Link from "next/link";
 
 
-export default function Home() {
+export default function Signup() {
     return (
+      <Layout>
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
-        <Head>
-          <title>TreeWind</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+       
   
         <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
           <h1 className="text-6xl font-bold">
@@ -27,21 +25,8 @@ export default function Home() {
   
          
         </main>
-  
-        <footer className="flex items-center justify-center w-full h-24 border-t">
-      <Link href="/signup">
-        <a
-          className="flex items-center justify-center"
-          
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <div  className="h-4 ml-2" >TreeWind </div>
-        </a>
-        </Link>
-      </footer>
-      </div>
+  </div>
+        </Layout>
     )
   }
   
