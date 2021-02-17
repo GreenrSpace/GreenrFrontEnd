@@ -9,7 +9,7 @@ export default function Plant(props) {
       {/* <a
       href={ContactLink}
     > */}
-          <h3 className="text-2xl font-bold">{Name}</h3>
+          {/* <h3 className="text-2xl font-bold">{Name}</h3> */}
 
       <Image
         src={ImageLink}
