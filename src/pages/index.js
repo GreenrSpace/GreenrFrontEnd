@@ -25,7 +25,7 @@ export default function Home() {
       ContactLink: "https://moodmap.app",
     },
     {
-      ImageLink: "/static/example_photos/thaiconstelation.JPG",
+      ImageLink: "/static/example_photos/thaiconstelation.png",
       Name: "Thai Constellation",
       Description: "Thai Constellation",
       ContactLink: "https://moodmap.app",
@@ -67,7 +67,7 @@ export default function Home() {
       ContactLink: "https://moodmap.app",
     },
     {
-      ImageLink: "/static/example_photos/elephantearvar",
+      ImageLink: "/static/example_photos/elephantearvar.JPG",
       Name: "Alocasia Macrorrhiza Variegata",
       Description: "Alocasia Macrorrhiza Variegata",
       ContactLink: "https://moodmap.app",
@@ -111,20 +111,16 @@ export default function Home() {
     <div>
 
     <Layout title = "Greenr Space">
-      <div className="flex flex-col items-center justify-center  py-2">
-        <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
+      <div className="flex flex-col items-center justify-left  py-2">
+        <main className="flex flex-col items-center justify-center flex-1 px-20 text-left">
           <h1 className="text-6xl font-bold">
-            Welcome to{" "}
-            <a className="text-blue-600" href="https://ubiklabs.tech">
-              Tom's Greenhouse
-            </a>
+            Plant Smith{" "}
           </h1>
-
           <p className="mt-3 text-2xl">
-            Browse, Peruse, Enjoy and{" "}
-            <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-              Reach Out at (Email){" "}
-            </code>
+            @plant.smith{" "}
+          </p>
+          <p className="mt-3 text-2xl">
+            Rare Aroid & Tropical Plant Collector{" "}
           </p>
           </main>
           </div>
