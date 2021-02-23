@@ -30,7 +30,7 @@ function NavbarCustom({ fixed }) {
             id="example-navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <Link href="/about" passHref>
                   <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
                     <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i>
@@ -39,22 +39,22 @@ function NavbarCustom({ fixed }) {
                 </Link>
               </li>
              
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link href="/blog" passHref>
                   <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
                     <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i>
                     <span className="ml-2">Blog</span>
                   </a>
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
-                <Link href="/demo/pupil-detection" passHref>
+                <Link href="/example" passHref>
                   <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
                     <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i>
-                    <span className="ml-2">Demo</span>
+                    <span className="ml-2">Example</span>
                   </a>
                 </Link>
-              </li> */}
+              </li>
             </ul>
           </div>
         </div>
@@ -67,7 +67,7 @@ function NavbarCustom({ fixed }) {
               <div className="flex items-center text-right right-0">
                 <span className="inline-flex rounded-md shadow-md right-0">
                   <span className="inline-flex rounded-md shadow-xs">
-                    <Link href="/signup">
+                    <Link href="/auth/signup">
                       <a
                         className="inline-flex whitespace-no-wrap items-center px-4 py-2 border border-transparent text-base leading-6 bg-gradient-to-r from-yellow-800 to-blue-800 hover:from-teal-600 hover:to-green-300   text-white font-semibold rounded-md"
                         active={false}
@@ -121,14 +121,14 @@ function NavbarCustom({ fixed }) {
               </Link>
             </li>
            
-            <li className="nav-item py-1">
+            {/* <li className="nav-item py-1">
               <Link href="/blog" passHref>
                 <a className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75">
                   <i className="fab fa-twitter text-lg leading-lg text-white opacity-75"></i>
                   <span className="ml-2">Blog</span>
                 </a>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       )}
