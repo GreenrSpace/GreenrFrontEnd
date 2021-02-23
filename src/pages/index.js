@@ -7,11 +7,6 @@ import Hero from "components/Content/Hero"
 import Layout from "components/Layout/Layout.js";
 
 export default function Home() {
-  const [ active, setActive ] = useState(false)
-
-  const toggleDrawer = () => {
-    setActive(!active)
-  }
 
   return (
     <div>
