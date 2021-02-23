@@ -10,13 +10,16 @@ export default function Modal(props) {
   const [showModal, setShowModal] = React.useState(false);
   return (
     <>
-      <button
-        className="bg-green-500 text-white active:bg-pink-600 font-bold uppercase text-sm rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-        type="button"
-        style={{ transition: "all .15s ease" }}
+    <Image
+        src={ImageLink}
+        alt="Work?"
+        width="600"
+        height="600"
+        layout="responsive"
         onClick={() => setShowModal(true)}
-      >
-More Information      </button>
+
+      />
+      
       {showModal ? (
         <>
           <div

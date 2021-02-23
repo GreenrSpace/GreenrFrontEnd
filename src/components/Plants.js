@@ -11,13 +11,7 @@ export default function Plant(props) {
     > */}
           {/* <h3 className="text-2xl font-bold">{Name}</h3> */}
 
-      <Image
-        src={ImageLink}
-        alt="Work?"
-        width="600"
-        height="600"
-        layout="responsive"
-      />
+      
       {/* </a> */}
       <Modal 
       
