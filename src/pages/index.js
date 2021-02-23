@@ -37,13 +37,13 @@ export default function Home() {
       ContactLink: "https://moodmap.app",
     },
     {
-      ImageLink: "/static/example_photos/anthclari.JPG",
-      Name: "Anthurium Crystallinum",
-      Description: "Anthurium Crystallinum",
+      ImageLink: "/static/example_photos/anthchoc.JPG",
+      Name: "Anthurium Chocolate",
+      Description: "Anthurium Chocolate",
       ContactLink: "https://moodmap.app",
     },
     {
-      ImageLink: "/static/example_photos/anthmagnificum.JPG",
+      ImageLink: "/static/example_photos/anthmag.JPG",
       Name: "Anthurium Magnificum",
       Description: "Anthurium Magnificum",
       ContactLink: "https://moodmap.app",

@@ -22,11 +22,26 @@ export default function Modal(props) {
       
       {showModal ? (
         <>
+        
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
             onClick={() => setShowModal(false)}
           >
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            
+            <div className="relative w-auto my-6 mx-auto max-w-3xl grid grid-cols-2	"> 
+            {/* which grid? number one */}
+            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+            <Image
+        src={ImageLink}
+        alt="Work?"
+        width="600"
+        height="600"
+        layout="responsive"
+        onClick={() => setShowModal(true)}
+
+      />  
+
+</div>
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
