@@ -29,48 +29,43 @@ function Research(props) {
           <div className="lg:col-start-2 lg:pl-8">
             <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
               <p className="leading-6 text-green-500 font-semibold tracking-wide uppercase">
-                We're at the beginning of a new era of plants
+                A new way to share your plant collection
               </p>
               <h1 className="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-                Sharing your love of nature is natural. Now you can share it with the best community in the world!
+                Join a community of like minded enthuthiasts and share your newest plant additions with others!
               </h1>
               <p className="text-lg leading-7 text-gray-500 mb-5">
-              Moodmap's vision of the future is one where medication efficacy is measured, and the tools necessary to achieve that are accessible for both researchers and individuals.  
+              Have you ever found yourself wishing there was a way to share your plant collection with others without the use of social media? Welcome to Greenr Space!   
               
               
 
               </p>
               <div className="prose text-gray-500">
                 <p>
-                Moodmap is looking to collaborate with researchers interested in understanding the affect of different substances, like Ritalin, Marijuana, and measuring there effectiveness 
-                with multi-modal ML algorithms. 
+                Greenr Space aims to bring the wider plant community closer together by offering a platform (or what we like to refer to as a Plantform!) which allows our users to display what plants are currently part of their collection.
                 </p>
-                <p>Currently in testing:</p>
+                <p>Currently in beta testing:</p>
                 <ul>
                 <li>
-                    MoodMapApp - Journal for medication, substance and meditation mapping.
+                    Sign up and connect with various plant lovers around the world.
                   </li>
                   <li>
-                    MoodCompass - Chrome Extension which analyses users computer usage to build a model of their attention and mood
+                    Upload pictures of your plants and write up a description - including details if you wish to allow other users to contact you to buy/trade!
                   </li>
                   <li>
-                    MoodVault - Desktop Application which creates more detailed datasets from users
+                    Tailor your profile to create your very own plant 'portfolio'
                   </li>
                 </ul>
-                <h2>Leading too</h2>
+                <h2>Sign up now to be one of the first to try the platform!</h2>
                 <ol>
-                  <li>
-                    Better understanding of the efficacy of medications and substances
-                  </li>
                   <il>
-                    Our Moodmap platform uses computer vision, natural language processing, and more to understand how attention is changing over time for users, how facial expressions and sentiment is changing, and understand symptoms like stimming and see there prevalence.
+                    Whether you are a private collector or even a nursery / plant store, Greenr Space can provide you somewhere to display all your plants so others can easily see what plants you own, or what stock you have available
+                  </il>
+                  <il>
+                    Join us as we revolutionise and innovate how we collect and share plants!
                   </il>
                   
-                  <li>Compliant and secure</li>
                   <il>
-                    Our platform is secure and going through the processes of becoming
-                    HIPAA-compliant and using a quality management system to ensure high-quality
-                    security. 
                   </il>
                 </ol>
               </div>

@@ -1,7 +1,7 @@
-import { apiRequest } from "./util";
+// import { apiRequest } from "./util";
 
-function subscribe(data) {
-  return apiRequest("newsletter", "POST", data);
-}
+// function subscribe(data) {
+//   return apiRequest("newsletter", "POST", data);
+// }
 
-export default { subscribe };
+// export default { subscribe };

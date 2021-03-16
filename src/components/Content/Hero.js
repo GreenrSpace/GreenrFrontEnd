@@ -1,26 +1,26 @@
 import { useState } from "react";
-import newsletter from "util/newsletter.js";
+// import newsletter from "util/newsletter.js";
 import FormField from "components/Layout/forms/FormField";
 
 
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 import Image from "next/image";
 
 import Link from "next/link";
 
 
 const Hero = (props) => {
-    const { handleSubmit, register, errors } = useForm();
-    const [earlysubsc, setSubscribed] = useState(false);
+    // const { handleSubmit, register, errors } = useForm();
+    // const [earlysubsc, setSubscribed] = useState(false);
   
-    const onSubmit = ({ email }) => {
-      setSubscribed(true);
-      // Parent component can optionally
-      // find out when subscribed.
-      props.onSubscribed && props.onSubscribed();
-      // Subscribe them
-      newsletter.subscribe({ email });
-    };
+    // const onSubmit = ({ email }) => {
+    //   setSubscribed(true);
+    //   // Parent component can optionally
+    //   // find out when subscribed.
+    //   props.onSubscribed && props.onSubscribed();
+    //   // Subscribe them
+    //   newsletter.subscribe({ email });
+    // };
 
   return (
     <>
@@ -88,7 +88,7 @@ const Hero = (props) => {
                   <p className="text-base font-medium text-gray-900">
                     Sign up to get notified about our journey, login to use our Alpha test.
                   </p>
-                  {earlysubsc === false && (
+                  {/* {earlysubsc === false && (
                     <form
                       onSubmit={handleSubmit(onSubmit)}
                       className="mt-3 sm:flex"
@@ -97,10 +97,10 @@ const Hero = (props) => {
                         aria-label="Email"
                         name="email"
                         type="email"
-                        error={errors.email}
-                        inputRef={register({
-                          required: "Please enter an email address",
-                        })}
+                        // error={errors.email}
+                        // inputRef={register({
+                        //   required: "Please enter an email address",
+                        // })}
                         className="appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1"
                         placeholder="Enter your email"
                       />
@@ -114,7 +114,7 @@ const Hero = (props) => {
                   )}
                   {earlysubsc === true && (
                     <div> More Moodmap information on it's way to you now!</div>
-                  )}
+                  )} */}
 
                   <p className="mt-3 text-sm leading-5 text-gray-500">
                     We care about creators, the climate and humans. Learn more on our&nbsp;
