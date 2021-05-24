@@ -26,11 +26,11 @@ const Hero = (props) => {
 
   return (
     <>
-        <div className="hidden absolute lg:block lg:relative lg:inset-0">
+        <div className="hidden relative lg:block lg:relative lg:inset-0">
          
         </div>
         <div className="relative pt-6 pb-16 md:pb-20 lg:pb-24 xl:pb-32">
-          <div className="absolute top-0 inset-x-0 p-2 md:hidden"></div>
+          <div className="relative top-0 inset-x-0 p-2 md:hidden"></div>
 
           <div className="mt-8 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-20 xl:mt-24">
             <div className="lg:grid lg:grid-cols-12 lg:gap-8">
@@ -60,14 +60,14 @@ const Hero = (props) => {
              
                 <div className="relative mx-auto w-auto rounded-lg lg:max-w-lg">
               
-                  <Image
+                  {/* <Image
                   className="object-contain z-50	"
                     alt="Work?"
         width="600"
         height="600"
         layout="responsive"
                     src={props.image}
-                  />
+                  /> */}
              
                 </div>
               </div>

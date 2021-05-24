@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Footer from "components/Layout/Footer";
 import Navbar from "components/Layout/Navbar"
 
 const Layout = (props)=> (
@@ -26,7 +25,6 @@ const Layout = (props)=> (
 <Navbar/>
     <div>{props.children}</div>
    
-    <Footer />
 
  
   </div>

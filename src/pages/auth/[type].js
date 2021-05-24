@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import AuthSection from "components/Authentication/AuthSection";
+import AuthSection from "components/Authentication/AuthSectionOld";
 import Layout from "components/Layout/Layout";
 
 import { useRouter } from "next/router";

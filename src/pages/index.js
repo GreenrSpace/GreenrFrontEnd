@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Link from "next/link";
+import Footer from "components/Layout/Footer";
 
 import Hero from "components/Content/Hero"
 
@@ -15,7 +16,7 @@ export default function Home() {
     <Hero testingphase="A better way to enjoy sharing your plants" 
     image = "/static/example_photos/silveryanne.JPG" 
     subtitle="Plants are love. Plants are life."/>
-          
+          <Footer/>
     </Layout>
    
 
