@@ -102,21 +102,8 @@ export default function AuthModal() {
                 <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
                   <>
                   {formAlert ? (
-          <div className="rounded-md bg-red-50 p-4">
-          <div className="flex">
-            <div className="flex-shrink-0">
-              <XCircleIcon className="h-5 w-5 text-red-400" aria-hidden="true" />
-            </div>
-            <div className="ml-3">
-              <h3 className="text-sm font-medium text-red-800">There was an error with your submission</h3>
-              <div className="mt-2 text-sm text-red-700">
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>{formAlert.message}</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+                    <FormAlert  type={formAlert.type} message={formAlert.message} />
+         
         ) : (
                     <div className=" flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
                       <div className="max-w-md w-full space-y-8">
