@@ -1,30 +1,14 @@
 import React from "react";
-import Auth from "components/Authentication/Auth";
+import Auth from "components/Authentication/AuthOld";
 
 function AuthSection(props) {
   // Values for each auth type
   const allTypeValues = {
-    signin: {
-      // Top title
-      title: "Sign in to your account",
-      // Submit button text
-      buttonText: "Sign in",
-      // Link text to other auth types
-      linkTextSignup: "Create an account",
-      linkTextForgotpass: "Forgot Password?",
-    },
+   
     signup: {
       title: "Get yourself an account",
       buttonText: "Sign up",
       linkTextSignin: "Sign in",
-    },
-    forgotpass: {
-      title: "Get a new password",
-      buttonText: "Reset password",
-    },
-    changepass: {
-      title: "Choose a new password",
-      buttonText: "Change password",
     },
   };
 

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Footer from "components/Layout/Footer";
-import Navbar from "components/Layout/NavbarCustom"
+import Navbar from "components/Layout/Navbar"
 
 const Layout = (props)=> (
 

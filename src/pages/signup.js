@@ -12,7 +12,7 @@ export default function Signup() {
         <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
           <h1 className="text-6xl font-bold">
             Ready to 
-            <a className="text-blue-600" href="https://ubiklabs.tech">
+            <a className="text-blue-600" href="https://moodmap.app">
               Join the leafs in the wind
             </a>
           </h1>

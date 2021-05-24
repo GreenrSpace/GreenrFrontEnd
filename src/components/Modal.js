@@ -1,53 +1,44 @@
 import React from "react";
 import Image from "next/image";
 
-
-
 export default function Modal(props) {
-
   const { ImageLink, Name, Description, ContactLink } = props;
 
   const [showModal, setShowModal] = React.useState(false);
   return (
     <>
-    <Image
+      <Image
         src={ImageLink}
         alt="Work?"
         width="600"
         height="600"
         layout="responsive"
         onClick={() => setShowModal(true)}
-
       />
-      
+
       {showModal ? (
         <>
-        
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
             onClick={() => setShowModal(false)}
           >
-            
-            <div className="relative w-auto my-6 mx-auto max-w-3xl grid grid-cols-2	"> 
-            {/* which grid? number one */}
-            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-            <Image
-        src={ImageLink}
-        alt="Work?"
-        width="600"
-        height="600"
-        layout="responsive"
-        onClick={() => setShowModal(true)}
-
-      />  
-
-</div>
+            <div className="relative w-auto my-6 mx-auto max-w-3xl grid grid-cols-2	">
+              {/* which grid? number one */}
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                <Image
+                  src={ImageLink}
+                  alt="Work?"
+                  width="600"
+                  height="600"
+                  layout="responsive"
+                  onClick={() => setShowModal(true)}
+                />
+              </div>
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t">
-                  <h3 className="text-3xl font-semibold">
-{Name}                  </h3>
+                  <h3 className="text-3xl font-semibold">{Name} </h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowModal(false)}
@@ -60,7 +51,7 @@ export default function Modal(props) {
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-gray-600 text-lg leading-relaxed">
-                   {Description}
+                    {Description}
                   </p>
                 </div>
                 {/*footer*/}
@@ -79,7 +70,8 @@ export default function Modal(props) {
                     style={{ transition: "all .15s ease" }}
                     // onClick={() => setShowModal(false)}
                   >
-Make an Offer                  </button>
+                    Make an Offer{" "}
+                  </button>
                 </div>
               </div>
             </div>

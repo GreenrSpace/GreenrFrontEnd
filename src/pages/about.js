@@ -35,27 +35,24 @@ function Research(props) {
                 Sharing your love of nature is natural. Now you can share it with the best community in the world!
               </h1>
               <p className="text-lg leading-7 text-gray-500 mb-5">
-              Moodmap's vision of the future is one where medication efficacy is measured, and the tools necessary to achieve that are accessible for both researchers and individuals.  
+              Greenr's vision of the future is one plantlove is shared! 
               
               
 
               </p>
               <div className="prose text-gray-500">
                 <p>
-                Moodmap is looking to collaborate with researchers interested in understanding the affect of different substances, like Ritalin, Marijuana, and measuring there effectiveness 
-                with multi-modal ML algorithms. 
+                Greenr is amazing
                 </p>
                 <p>Currently in testing:</p>
                 <ul>
                 <li>
-                    MoodMapApp - Journal for medication, substance and meditation mapping.
+                    GreenrApp - plantpeople!
                   </li>
                   <li>
-                    MoodCompass - Chrome Extension which analyses users computer usage to build a model of their attention and mood
+                    Greenr - plantay
                   </li>
-                  <li>
-                    MoodVault - Desktop Application which creates more detailed datasets from users
-                  </li>
+                  
                 </ul>
                 <h2>Leading too</h2>
                 <ol>
@@ -63,14 +60,12 @@ function Research(props) {
                     Better understanding of the efficacy of medications and substances
                   </li>
                   <il>
-                    Our Moodmap platform uses computer vision, natural language processing, and more to understand how attention is changing over time for users, how facial expressions and sentiment is changing, and understand symptoms like stimming and see there prevalence.
+                    Our Greenr platform uses computer vision, natural language processing, and more to understand how attention is changing over time for users, how facial expressions and sentiment is changing, and understand symptoms like stimming and see there prevalence.
                   </il>
                   
                   <li>Compliant and secure</li>
                   <il>
-                    Our platform is secure and going through the processes of becoming
-                    HIPAA-compliant and using a quality management system to ensure high-quality
-                    security. 
+                    magic plants need magic security.
                   </il>
                 </ol>
               </div>
@@ -105,13 +100,13 @@ function Research(props) {
         <div className="relative max-w-screen-xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
           <div className="md:mr-auto md:w-1/2 md:pl-10">
             <div className="text-base leading-6 font-semibold uppercase tracking-wider text-gray-300">
-              Moodmap - Devoted to a new avenue of attacking mental health
+              Greenr - Devoted to plants
             </div>
             <h2 className="mt-2 text-white text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10">
               Want to learn more?
             </h2>
             <p className="mt-3 text-lg leading-7 text-gray-300">
-              We are currently working with research
+              We are currently working with plant people
             </p>
             <div className="mt-8">
               <div className="inline-flex rounded-md shadow">

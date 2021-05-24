@@ -9,13 +9,15 @@ import Layout from "components/Layout/Layout.js";
 export default function Home() {
 
   return (
-    <div>
+   
 
     <Layout title = "Greenr Space">
-    <Hero testingphase="Words, everywhere" image = "/static/example_photos/silveryanne.JPG" subtitle="a subtitle bish"/>
+    <Hero testingphase="A better way to enjoy sharing your plants" 
+    image = "/static/example_photos/silveryanne.JPG" 
+    subtitle="Plants are love. Plants are life."/>
           
     </Layout>
-    </div>
+   
 
   );
 }

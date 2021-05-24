@@ -1,168 +1,131 @@
-import React, { useState } from "react";
-// import { useAuth } from "util/auth.js";
-import { useForm } from "react-hook-form";
-import FormField from "components/Layout/forms/FormField";
+import FormAlert from "./FormAlert.js"
+import { Fragment, useState } from "react";
 
-function AuthForm(props) {
-  // const auth = useAuth();
-
-  const [pending, setPending] = useState(false);
-  const { handleSubmit, register, errors, getValues } = useForm();
-
-  const submitHandlersByType = {
-    signin: ({ email, pass }) => {
-      return auth.signin(email, pass).then((user) => {
-        // Call auth complete handler
-        props.onAuth(user);
-      });
-    },
-    signup: ({ email, pass }) => {
-      return auth.signup(email, pass).then((user) => {
-        // Call auth complete handler
-        props.onAuth(user);
-      });
-    },
-    forgotpass: ({ email }) => {
-      return auth.sendPasswordResetEmail(email).then(() => {
-        // Show success alert message
-        props.onFormAlert({
-          type: "success",
-          message: "Password reset email sent",
-        });
-      });
-    },
-    changepass: ({ pass }) => {
-      return auth.confirmPasswordReset(pass).then(() => {
-        // Show success alert message
-        props.onFormAlert({
-          type: "success",
-          message: "Your password has been changed",
-        });
-      });
-    },
-  };
-
-  // Handle form submission
-  const onSubmit = ({ email, pass }) => {
-    // Show pending indicator
-    setPending(true);
-
-    // Call submit handler for auth type
-    submitHandlersByType[props.type]({
-      email,
-      pass,
-    })
-      .catch((error) => {
-        // Show error alert message
-        props.onFormAlert({
-          type: "error",
-          message: error.message,
-        });
+  
+  export default function AuthForm(props) {
+    const [pending, setPending] = useState(false);
+    // const { handleSubmit, register, errors, getValues } = useForm();
+    const [user, setUser] = useState({ name: "Sign Up!" });
+    const [formAlert, setFormAlert] = useState(null);
+  
+    console.log(user);
+  
+    // Handle form submission
+    const submit = (e) => {
+      setPending(true);
+      console.log({ name: user.name, email: user.email });
+      const payload = JSON.stringify({ "email": user["email"], "name": user["name"] });
+  
+      console.log(payload);
+  
+      e.preventDefault();
+      fetch("https://us-central1-blinkapp-684c1.cloudfunctions.net/fakeAuth", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+  
+        body: payload,
       })
-      .finally(() => {
-        // Hide pending indicator
-        setPending(false);
-      });
-  };
-
-  return (
-    <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-      <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div>
-            <label
-              for="email"
-              className="block text-sm font-medium leading-5 text-gray-700"
-            >
-              Email Address
-            </label>
-            {["signup", "signin", "forgotpass"].includes(props.type) && (
-              <form className="mt-1 rounded-md shadow-sm" controlId="formEmail">
-                <FormField
-                  type="email"
-                  name="email"
-                  placeholder="Enter Email"
-
-                  error={errors.email}
-                  inputRef={register({
-                    required: "Please enter an email",
-                  })}
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                />
-              </form>
-            )}
+        .then((res) => res.json())
+        .then((json) => setUser(json))
+        .catch((error) => {
+          // Show error alert message
+          console.log(error);
+          setFormAlert({ type: "error", message: "didn't work!" });
+        })
+        .finally(() => {
+          // Hide pending indicator
+          setPending(false);
+        });
+    };
+  
+    return (
+      <>
+        {formAlert ? (
+          <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+            <FormAlert type={formAlert.type} message={formAlert.message} />
           </div>
-          <div>
-            <label
-              for="email"
-              className="block text-sm font-medium leading-5 text-gray-700"
-            >
-              Password
-            </label>
-            {["signup", "signin", "changepass"].includes(props.type) && (
-              <form
-                className="mt-1 rounded-md shadow-sm"
-                controlId="formPassword"
-              >
-                <FormField
-                  name="pass"
-                  type="password"
-                  placeholder="Enter Password"
-                  error={errors.pass}
-                  inputRef={register({
-                    required: "Please enter a password",
-                  })}
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                />
-              </form>
-            )}
-          </div>
-
-          <div>
-            {["signup", "changepass"].includes(props.type) && (
-              <form
-                className="mt-1 rounded-md shadow-sm"
-                controlId="formConfirmPass"
-              >
-                <label
-                  for="email"
-                  className="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Confirm Password
-                </label>
-                <FormField
-                  name="confirmPass"
-                  type="password"
-                  placeholder="Confirm Password"
-                  error={errors.confirmPass}
-                  inputRef={register({
-                    required: "Please enter your password again",
-                    validate: (value) => {
-                      if (value === getValues().pass) {
-                        return true;
-                      } else {
-                        return "This doesn't match your password";
+        ) : (
+          <div className="pt-8">
+            <div>
+              <h3 className="text-lg leading-6 font-medium text-gray-900">
+                Personal Information
+              </h3>
+              <p className="mt-1 text-sm text-gray-500">
+                Use a permanent address where you can receive mail.
+              </p>
+            </div>
+            <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+              <form onSubmit={submit}>
+                <div className="sm:col-span-3">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Full name
+                  </label>
+                  <div className="mt-1 shadow-sm focus:ring-green-500 focus:border-green-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                    <input
+                      type="text"
+                      name="user[name]"
+                      id="name"
+                      value={user.name}
+                      onChange={(e) => setUser({ ...user, name: e.target.value })}
+                      autoComplete="given-name"
+                      className="shadow-sm focus:ring-green-500 focus:border-green-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                    />
+                  </div>
+                </div>
+  
+                <div className="sm:col-span-4">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Email address
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      id="email"
+                      name="user[email]"
+                      value={user.email}
+                      onChange={(e) =>
+                        setUser({ ...user, email: e.target.value })
                       }
-                    },
-                  })}
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
-                />
+                      autoComplete="email"
+                      className="shadow-sm focus:ring-green-500 focus:border-green-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                    />
+                  </div>
+                </div>
+  
+                <div className="sm:col-span-4">
+                  <label
+                    htmlFor="confirmEmail"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Confirm email
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      id="confirmEmail"
+                      name="confirmEmail"
+                      type="confirmEmail"
+                      autoComplete="confirmEmail"
+                      className="shadow-sm focus:ring-green-500 focus:border-green-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                    />
+                  </div>
+                </div>
               </form>
-            )}
-          </div>
-
-          <div className="mt-6">
-            <span className="block w-full rounded-md shadow-sm">
+            </div>
+            <div className="mt-5 sm:mt-6">
               <button
-                className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-gradient-to-r from-pink-500 to-orange-500 hover:from-teal-600 hover:to-green-300 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
-                variant="primary"
-                block={true}
-                size={props.inputSize}
                 type="submit"
+                className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:text-sm"
                 disabled={pending}
+                onClick={submit}
               >
-                {!pending && <span>{props.typeValues.buttonText}</span>}
-
+                {!pending && <span>Submit</span>}
+  
                 {pending && (
                   <>
                     <svg
@@ -189,12 +152,10 @@ function AuthForm(props) {
                   </>
                 )}
               </button>
-            </span>
+            </div>
           </div>
-        </form>
-      </div>
-    </div>
-  );
-}
-
-export default AuthForm;
+        )}
+      </>
+    );
+  };
+  
