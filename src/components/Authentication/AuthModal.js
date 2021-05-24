@@ -7,7 +7,7 @@ import { XCircleIcon } from '@heroicons/react/solid'
 
 import { useForm } from "react-hook-form";
 // import { useRouter } from "next/router";
-
+import validateSignUpForm from "./validateSignup.js"
 // import AuthForm from "./AuthForm.js"
 
 export default function AuthModal() {
@@ -23,10 +23,16 @@ export default function AuthModal() {
   // Handle form submission
   const submit = (e) => {
     setPending(true);
+    //validation next.
+    //validateSignUpForm(user.name,user.email,user.confirmEmail)
+    if (!isFormValid) {
+      setFormAlert({ type: errors, message: messageValidate });
+    }
+  
     console.log({ name: user.name, email: user.email });
     const payload = JSON.stringify({
-      email: user["email"],
-      name: user["name"],
+      email: user.email,
+      name: user.name,
     });
 
     console.log(payload);
@@ -175,9 +181,12 @@ export default function AuthModal() {
                                 Confirm Email address
                               </label>
                               <input
-                                id="confirm-email"
-                                name="confirmEmail"
-                                type="confirmEmail"
+                                id="confirmEmail"
+                                name="user[confirmEmail]"
+                                value={user.confirmEmail}
+                                onChange={(e) =>
+                                  setUser({ ...user, confirmEmail: e.target.value })
+                                }
                                 autoComplete="confirmEmail"
                                 required
                                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"

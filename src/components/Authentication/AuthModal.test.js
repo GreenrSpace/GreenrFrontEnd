@@ -5,7 +5,7 @@ import AuthModal from './AuthModal';
 
 test('Link changes the class when hovered', () => {
   const component = renderer.create(
-    <Link page="http://www.facebook.com">Facebook</Link>,
+    <AuthModal />,
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
